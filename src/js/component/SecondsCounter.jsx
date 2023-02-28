@@ -15,7 +15,7 @@ const SecondsCounter = (props) =>{
         <div class="text-primary   me-3 p-2 border bg-light border-4 rounded">{props.counter}</div>
         </div>
     <button class="m-2 px-3 btn btn-info btn-outline-light rounded"  onClick={props.clickOn}>Click On</button>
-    <button class="m-2 px-3 btn btn-info btn-outline-light rounded">Click stop</button>
+    <button class="m-2 px-3 btn btn-info btn-outline-light rounded" onClick={props.clickStop}>Click stop</button>
 
 
     
