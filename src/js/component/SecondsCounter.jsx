@@ -9,6 +9,7 @@ const SecondsCounter = () =>{
 	const [ counter2 , setCounter2 ] = useState(0);
 	const [ counter3 , setCounter3 ] = useState(0);
 	const [ counter4 , setCounter4 ] = useState(0);
+    const [ counter5 , setCounter5 ] = useState(0);
     const [onOff, setOnOff] = useState(false)
 let intervalId;
 const counterOne=()=>{
@@ -31,6 +32,7 @@ const restore = () => {
     setCounter2(0);
     setCounter3(0);
     setCounter4(0);
+    setCounter5(0);
     setOnOff(false)
   };
 
@@ -54,7 +56,11 @@ if(counter3 == 10 ){
 	const newcounter4 = counter4 + 1
 	setCounter4( newcounter4)
 }
-
+if(counter4 == 10 ){
+	setCounter5(0)
+	const newcounter5 = counter5 + 1
+	setCounter5( newcounter5)
+}
     return(
 <>
 
@@ -62,11 +68,13 @@ if(counter3 == 10 ){
     <div >
         <h1>React Counter</h1>
     <div class=" d-flex justify-content-center fs-1 p-3 m-3 bg-danger rounded">
-        <div class="text-primary  me-3 p-2  bg-light border border-4  rounded" >{counter4}</div>
-        <div class="text-warning  me-3 p-2 bg-light border border-4  rounded">{counter3}</div>
-        <div class="text-success   me-3 p-2 border bg-light border-4  rounded">{counter2}</div>
-        <div class="text-danger  me-3 p-2 border bg-light border-4 rounded">{counter1}</div>
-        <div class="text-primary   me-3 p-2 border bg-light border-4 rounded">{counter}</div>
+    <i class="fa-solid fa-clock m-3 p-2 "></i>
+    <div class="text-primary  me-3 p-3  bg-light border border-4  rounded" >{counter5}</div>
+        <div class="text-dark  me-3 p-3  bg-light border border-4  rounded" >{counter4}</div>
+        <div class="text-warning  me-3 p-3 bg-light border border-4  rounded">{counter3}</div>
+        <div class="text-success me-3 p-3 border bg-light border-4  rounded">{counter2}</div>
+        <div class="text-danger  me-3 p-3 border bg-light border-4 rounded">{counter1}</div>
+        <div class="text-primary  me-3 p-3 border bg-light border-4 rounded">{counter}</div>
         </div>
     <button class="m-2 px-3 btn btn-info btn-outline-light rounded" onClick={start}  >Start / Stop</button>
     <button class="m-2 px-3 btn btn-info btn-outline-light rounded" onClick={restore}>Restore</button>
